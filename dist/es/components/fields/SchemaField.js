@@ -357,7 +357,9 @@ function SchemaFieldRender(props) {
     onBlur: props.onBlur,
     onChange: props.onChange,
     onFocus: props.onFocus,
-    options: schema.anyOf,
+    options: schema.anyOf.map(function (_schema) {
+      return retrieveSchema(_schema, rootSchema, formData);
+    }),
     baseType: schema.type,
     registry: registry,
     schema: schema,
@@ -371,7 +373,9 @@ function SchemaFieldRender(props) {
     onBlur: props.onBlur,
     onChange: props.onChange,
     onFocus: props.onFocus,
-    options: schema.oneOf,
+    options: schema.oneOf.map(function (_schema) {
+      return retrieveSchema(_schema, rootSchema, formData);
+    }),
     baseType: schema.type,
     registry: registry,
     schema: schema,

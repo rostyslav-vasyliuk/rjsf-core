@@ -307,7 +307,8 @@ function (_Component) {
         uiSchema: uiSchema,
         schema: schema,
         formData: formData,
-        formContext: formContext
+        formContext: formContext,
+        registry: registry
       };
       return _react["default"].createElement(Template, _extends({}, templateProps, {
         onAddClick: this.handleAddClick
