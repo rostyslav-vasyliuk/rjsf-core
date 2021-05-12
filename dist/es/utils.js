@@ -1193,10 +1193,10 @@ export function getMatchingOption(formData, options, rootSchema) {
 
       delete augmentedSchema.required;
 
-      if (isValid(augmentedSchema, formData)) {
+      if (isValid(augmentedSchema, formData, rootSchema)) {
         return _i2;
       }
-    } else if (isValid(options[_i2], formData)) {
+    } else if (isValid(option, formData, rootSchema)) {
       return _i2;
     }
   }

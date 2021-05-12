@@ -1290,10 +1290,10 @@ function getMatchingOption(formData, options, rootSchema) {
 
       delete augmentedSchema.required;
 
-      if ((0, _validate.isValid)(augmentedSchema, formData)) {
+      if ((0, _validate.isValid)(augmentedSchema, formData, rootSchema)) {
         return _i2;
       }
-    } else if ((0, _validate.isValid)(options[_i2], formData)) {
+    } else if ((0, _validate.isValid)(option, formData, rootSchema)) {
       return _i2;
     }
   }
